@@ -6,4 +6,4 @@ Description: Remove YouTube Premium upsell alerts.
 Maintainer: PoomSmart
 Author: PoomSmart
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000)
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 11.0)
