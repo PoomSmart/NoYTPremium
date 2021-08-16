@@ -12,8 +12,12 @@
 - (BOOL)shouldThrottleInterstitial { return YES; }
 %end
 
-// Whatever this is for
+// Whatever these are for
 %hook YTPromoThrottleController
 - (BOOL)canShowThrottledPromo { return NO; }
 - (BOOL)canShowThrottledPromoWithFrequencyCap:(id)frequencyCap { return NO; }
+%end
+
+%hook YTSurveyController
+- (void)showSurveyWithRenderer:(id)arg1 surveyParentResponder:(id)arg2 {}
 %end
