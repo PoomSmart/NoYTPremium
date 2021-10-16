@@ -12,6 +12,11 @@
 - (BOOL)shouldThrottleInterstitial { return YES; }
 %end
 
+// "Try new features" in settings
+%hook YTSettingsSectionItemManager
+- (void)updatePremiumEarlyAccessSectionWithEntry:(id)arg1 {}
+%end
+
 // Whatever these are for
 %hook YTPromoThrottleController
 - (BOOL)canShowThrottledPromo { return NO; }
