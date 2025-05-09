@@ -1,3 +1,5 @@
+#import <YouTubeHeader/YTIShowFullscreenInterstitialCommand.h>
+
 // Alert
 %hook YTCommerceEventGroupHandler
 - (void)addEventHandlers {}
@@ -19,7 +21,11 @@
 %end
 
 %hook YTIShowFullscreenInterstitialCommand
-- (BOOL)shouldThrottleInterstitial { return YES; }
+- (BOOL)shouldThrottleInterstitial {
+    if (self.hasModalClientThrottlingRules)
+        self.modalClientThrottlingRules.throttledAfterRecentSignIn = YES;
+    return %orig;
+}
 %end
 
 // "Try new features" in settings
