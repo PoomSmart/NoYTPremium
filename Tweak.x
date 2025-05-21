@@ -23,7 +23,7 @@
 %hook YTIShowFullscreenInterstitialCommand
 - (BOOL)shouldThrottleInterstitial {
     if (self.hasModalClientThrottlingRules)
-        self.modalClientThrottlingRules.throttledAfterRecentSignIn = YES;
+        self.modalClientThrottlingRules.oncePerTimeWindow = YES;
     return %orig;
 }
 %end

@@ -1,6 +1,6 @@
 Package: com.ps.noytpremium
 Name: NoYTPremium
-Version: 1.0.0
+Version: 1.0.6
 Architecture: iphoneos-arm
 Description: Removes YouTube Premium upsells.
 Maintainer: PoomSmart
